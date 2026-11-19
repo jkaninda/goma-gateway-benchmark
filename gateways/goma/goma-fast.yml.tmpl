@@ -1,0 +1,34 @@
+# Goma Gateway — benchmark configuration, zero-debounce variant.
+#
+# Identical to goma.yml except for `debounce: 0s` (Goma 1.1+): the file watcher
+# reloads on every event instead of waiting 500 ms for writes to stop. Route
+# files are written atomically by the harness, so nothing half-written is read.
+#
+# Only what the benchmark needs: one HTTP entry point, the file provider with
+# hot-reload on, metrics and access logging off. Every gateway in this harness
+# is configured the same way — no caching, no compression, no middleware — so
+# the scenarios measure routing and reloading, not feature sets.
+gateway:
+  timeouts:
+    write: 30
+    read: 30
+    idle: 60
+
+  entryPoints:
+    web:
+      address: "[::]:__PORT__"
+
+  providers:
+    file:
+      enabled: true
+      directory: __DYNAMIC__
+      watch: true
+      debounce: 0s
+
+  monitoring:
+    enableMetrics: false
+    enableReadiness: true
+    enableLiveness: true
+
+  log:
+    level: error

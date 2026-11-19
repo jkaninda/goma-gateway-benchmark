@@ -1,0 +1,34 @@
+# Goma Gateway — benchmark base configuration.
+#
+# Only what the benchmark needs: one HTTP entry point, the file provider with
+# hot-reload on, metrics and access logging off. Every gateway in this harness
+# is configured the same way — no caching, no compression, no middleware — so
+# the scenarios measure routing and reloading, not feature sets.
+#
+# Everything else is left at its default, including two things that matter to
+# the scenarios: the 500 ms file-watch debounce (capped at 4x that while writes
+# keep arriving, Goma 1.1+), and passive health checks on multi-backend routes
+# (on by default since 1.1: eject after 2 connection failures, for 10 s).
+gateway:
+  timeouts:
+    write: 30
+    read: 30
+    idle: 60
+
+  entryPoints:
+    web:
+      address: "[::]:__PORT__"
+
+  providers:
+    file:
+      enabled: true
+      directory: __DYNAMIC__
+      watch: true
+
+  monitoring:
+    enableMetrics: false
+    enableReadiness: true
+    enableLiveness: true
+
+  log:
+    level: error

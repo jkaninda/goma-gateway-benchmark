@@ -1,0 +1,50 @@
+# nginx — benchmark base configuration.
+#
+# Routes are individual files under __DYNAMIC__ that are included into the one
+# server block; adding a route means writing a file and sending SIGHUP.
+daemon off;
+master_process on;
+worker_processes __WORKERS__;
+error_log __RUNDIR__/logs/nginx-error.log crit;
+pid __RUNDIR__/nginx.pid;
+
+events {
+    worker_connections 8192;
+}
+
+http {
+    access_log off;
+    error_log __RUNDIR__/logs/nginx-error.log crit;
+
+    client_body_temp_path __RUNDIR__/tmp/client;
+    proxy_temp_path       __RUNDIR__/tmp/proxy;
+    fastcgi_temp_path     __RUNDIR__/tmp/fastcgi;
+    uwsgi_temp_path       __RUNDIR__/tmp/uwsgi;
+    scgi_temp_path        __RUNDIR__/tmp/scgi;
+
+    sendfile on;
+    tcp_nopush on;
+    tcp_nodelay on;
+    keepalive_timeout 65;
+    server_tokens off;
+    types_hash_max_size 2048;
+    default_type application/octet-stream;
+
+    # Route files can define upstreams, so they are included at http level too.
+    include __DYNAMIC__/upstreams/*.conf;
+
+    server {
+        listen __PORT__ reuseport default_server;
+        server_name _;
+
+        proxy_http_version 1.1;
+        proxy_set_header Connection "";
+        proxy_buffering on;
+
+        location = /_bench/health {
+            return 200 "ok\n";
+        }
+
+        include __DYNAMIC__/routes/*.conf;
+    }
+}

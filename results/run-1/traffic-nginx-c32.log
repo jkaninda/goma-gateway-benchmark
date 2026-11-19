@@ -1,0 +1,48 @@
+Fortio 1.77.0 running at 0 queries per second, 6 procs, for 20s: http://127.0.0.1:8080/r-1/
+Aggregated Function Time : count 2791724 avg 0.0002289819 +/- 0.000148 min 1.494e-05 max 0.006204417 sum 639.254258
+# target 50% 0.00051096
+# target 75% 0.00075897
+# target 90% 0.000907776
+# target 99% 0.00099706
+# target 99.9% 0.00188195
+Error cases : count 0 avg 0 +/- 0 min 0 max 0 sum 0
+# Socket and IP used for each connection:
+[0]  89 socket used, resolved to 127.0.0.1:8080, connection timing : count 89 avg 0.00010526561 +/- 7.845e-05 min 3.665e-05 max 0.000501312 sum 0.009368639
+[1]  87 socket used, resolved to 127.0.0.1:8080, connection timing : count 87 avg 0.00010992907 +/- 9.039e-05 min 3.7801e-05 max 0.000491605 sum 0.009563829
+[2]  87 socket used, resolved to 127.0.0.1:8080, connection timing : count 87 avg 9.8646828e-05 +/- 6.191e-05 min 3.6949e-05 max 0.000310624 sum 0.008582274
+[3]  87 socket used, resolved to 127.0.0.1:8080, connection timing : count 87 avg 0.00012208148 +/- 7.987e-05 min 4.2481e-05 max 0.000517935 sum 0.010621089
+[4]  88 socket used, resolved to 127.0.0.1:8080, connection timing : count 88 avg 0.00013087018 +/- 8.116e-05 min 3.741e-05 max 0.000370979 sum 0.011516576
+[5]  88 socket used, resolved to 127.0.0.1:8080, connection timing : count 88 avg 0.00011260372 +/- 8.332e-05 min 3.703e-05 max 0.000426923 sum 0.009909127
+[6]  87 socket used, resolved to 127.0.0.1:8080, connection timing : count 87 avg 0.00010284817 +/- 6.004e-05 min 3.674e-05 max 0.000277352 sum 0.008947791
+[7]  88 socket used, resolved to 127.0.0.1:8080, connection timing : count 88 avg 0.00012344678 +/- 8.273e-05 min 3.742e-05 max 0.000466207 sum 0.010863317
+[8]  88 socket used, resolved to 127.0.0.1:8080, connection timing : count 88 avg 0.00010165617 +/- 7.584e-05 min 3.5728e-05 max 0.000421665 sum 0.008945743
+[9]  87 socket used, resolved to 127.0.0.1:8080, connection timing : count 87 avg 0.00010900423 +/- 6.859e-05 min 3.6878e-05 max 0.00031939 sum 0.009483368
+[10]  87 socket used, resolved to 127.0.0.1:8080, connection timing : count 87 avg 0.00010861672 +/- 8.18e-05 min 3.7141e-05 max 0.000407146 sum 0.009449655
+[11]  88 socket used, resolved to 127.0.0.1:8080, connection timing : count 88 avg 0.00010993887 +/- 0.0001037 min 3.748e-05 max 0.000875239 sum 0.009674621
+[12]  87 socket used, resolved to 127.0.0.1:8080, connection timing : count 87 avg 0.00011855256 +/- 0.0001002 min 3.8402e-05 max 0.00067473 sum 0.010314073
+[13]  88 socket used, resolved to 127.0.0.1:8080, connection timing : count 88 avg 9.7563989e-05 +/- 6.607e-05 min 3.7009e-05 max 0.00033521 sum 0.008585631
+[14]  88 socket used, resolved to 127.0.0.1:8080, connection timing : count 88 avg 0.00012213008 +/- 7.934e-05 min 3.6418e-05 max 0.000399142 sum 0.010747447
+[15]  88 socket used, resolved to 127.0.0.1:8080, connection timing : count 88 avg 0.00012059449 +/- 7.828e-05 min 3.7591e-05 max 0.000353615 sum 0.010612315
+[16]  88 socket used, resolved to 127.0.0.1:8080, connection timing : count 88 avg 0.00011426143 +/- 7.949e-05 min 3.7411e-05 max 0.00038263 sum 0.010055006
+[17]  88 socket used, resolved to 127.0.0.1:8080, connection timing : count 88 avg 0.00012589106 +/- 8.09e-05 min 3.6378e-05 max 0.000448995 sum 0.011078413
+[18]  87 socket used, resolved to 127.0.0.1:8080, connection timing : count 87 avg 0.00010397359 +/- 7.094e-05 min 1.9728e-05 max 0.000417106 sum 0.009045702
+[19]  88 socket used, resolved to 127.0.0.1:8080, connection timing : count 88 avg 0.00011198631 +/- 7.912e-05 min 3.7772e-05 max 0.000410863 sum 0.009854795
+[20]  88 socket used, resolved to 127.0.0.1:8080, connection timing : count 88 avg 0.00012046116 +/- 8.99e-05 min 3.4654e-05 max 0.000432664 sum 0.010600582
+[21]  88 socket used, resolved to 127.0.0.1:8080, connection timing : count 88 avg 0.00011540839 +/- 0.0001292 min 1.577e-05 max 0.001032715 sum 0.010155938
+[22]  88 socket used, resolved to 127.0.0.1:8080, connection timing : count 88 avg 0.00012935691 +/- 0.0001705 min 3.696e-05 max 0.00150864 sum 0.011383408
+[23]  87 socket used, resolved to 127.0.0.1:8080, connection timing : count 87 avg 0.00011750567 +/- 8.069e-05 min 3.6539e-05 max 0.000537503 sum 0.010222993
+[24]  88 socket used, resolved to 127.0.0.1:8080, connection timing : count 88 avg 0.00012484051 +/- 8.045e-05 min 3.5486e-05 max 0.00035068 sum 0.010985965
+[25]  89 socket used, resolved to 127.0.0.1:8080, connection timing : count 89 avg 0.00011941387 +/- 8.778e-05 min 3.7521e-05 max 0.000556376 sum 0.010627834
+[26]  88 socket used, resolved to 127.0.0.1:8080, connection timing : count 88 avg 0.00010454886 +/- 7.741e-05 min 3.5687e-05 max 0.000390315 sum 0.0092003
+[27]  88 socket used, resolved to 127.0.0.1:8080, connection timing : count 88 avg 0.00010689572 +/- 7.027e-05 min 3.5727e-05 max 0.000369015 sum 0.009406823
+[28]  88 socket used, resolved to 127.0.0.1:8080, connection timing : count 88 avg 0.00010670456 +/- 7.627e-05 min 3.9002e-05 max 0.000403729 sum 0.009390001
+[29]  88 socket used, resolved to 127.0.0.1:8080, connection timing : count 88 avg 0.00011366286 +/- 6.824e-05 min 1.561e-05 max 0.000352062 sum 0.010002332
+[30]  89 socket used, resolved to 127.0.0.1:8080, connection timing : count 89 avg 0.00012055071 +/- 9.204e-05 min 3.7491e-05 max 0.000660334 sum 0.010729013
+[31]  88 socket used, resolved to 127.0.0.1:8080, connection timing : count 88 avg 0.00011629202 +/- 0.0001243 min 3.6499e-05 max 0.000964063 sum 0.010233698
+Sockets used: 2810 (for perfect keepalive, would be 32)
+Uniform: false, Jitter: false, Catchup allowed: false
+IP addresses distribution:
+127.0.0.1:8080: 2810
+Code 200 : 2791724 (100.0 %)
+All done 2791724 calls (plus 32 warmup) 0.229 ms avg, 139584.6 qps
+Successfully wrote 4679 bytes of Json data to /bench/results/run-1/traffic-nginx-c32.json

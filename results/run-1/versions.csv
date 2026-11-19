@@ -1,0 +1,9 @@
+gateway,version
+goma,1.2.1
+goma-fast,1.2.1
+goma-reload,1.2.1
+traefik,3.7.19
+traefik-fast,3.7.19
+nginx,1.30.7
+haproxy,3.4.8-1b15b69
+fortio,1.77.0

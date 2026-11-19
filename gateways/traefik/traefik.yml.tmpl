@@ -1,0 +1,28 @@
+# Traefik v3 — benchmark base configuration (static).
+#
+# Defaults throughout: the file provider with watch on and the default 2 s
+# providersThrottleDuration. See traefik-fast.yml for the 0 s variant.
+entryPoints:
+  web:
+    address: ":__PORT__"
+
+providers:
+  file:
+    directory: __DYNAMIC__
+    watch: true
+
+api:
+  dashboard: false
+  insecure: false
+
+ping:
+  entryPoint: web
+
+log:
+  level: ERROR
+
+# Access logging stays off for every gateway in this harness.
+
+global:
+  checkNewVersion: false
+  sendAnonymousUsage: false

@@ -1,0 +1,17 @@
+Fortio 1.77.0 running at 0 queries per second, 6 procs, for 20s: http://127.0.0.1:8080/r-1/
+Aggregated Function Time : count 114117 avg 0.0001748117 +/- 2.699e-05 min 0.000117622 max 0.003184894 sum 19.9489871
+# target 50% 0.00055883
+# target 75% 0.000779438
+# target 90% 0.000911803
+# target 99% 0.000991222
+# target 99.9% 0.000999164
+Error cases : count 0 avg 0 +/- 0 min 0 max 0 sum 0
+# Socket and IP used for each connection:
+[0]   1 socket used, resolved to 127.0.0.1:8080, connection timing : count 1 avg 0.000147988 +/- 0 min 0.000147988 max 0.000147988 sum 0.000147988
+Sockets used: 1 (for perfect keepalive, would be 1)
+Uniform: false, Jitter: false, Catchup allowed: false
+IP addresses distribution:
+127.0.0.1:8080: 1
+Code 200 : 114117 (100.0 %)
+All done 114117 calls (plus 1 warmup) 0.175 ms avg, 5705.8 qps
+Successfully wrote 3775 bytes of Json data to /bench/results/run-1/traffic-haproxy-c1.json

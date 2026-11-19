@@ -1,0 +1,37 @@
+# Goma Gateway — benchmark configuration, on-demand reload variant.
+#
+# Identical to goma.yml except that the file watcher is off and the
+# token-protected reload endpoint is on. The harness POSTs to that endpoint the
+# moment a route file is written, the same way it signals nginx and HAProxy.
+#
+# This variant exists to separate two different things the default "goma" run
+# measures together: the file provider's watch debounce (500 ms by default), and
+# the time the gateway actually needs to apply a new route.
+gateway:
+  timeouts:
+    write: 30
+    read: 30
+    idle: 60
+
+  entryPoints:
+    web:
+      address: "[::]:__PORT__"
+
+  providers:
+    file:
+      enabled: true
+      directory: __DYNAMIC__
+      watch: false
+
+  reload:
+    enabled: true
+    token: benchmark
+    path: /gateway/reload
+
+  monitoring:
+    enableMetrics: false
+    enableReadiness: true
+    enableLiveness: true
+
+  log:
+    level: error

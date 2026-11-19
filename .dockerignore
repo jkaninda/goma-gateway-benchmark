@@ -1,0 +1,5 @@
+results/
+bin/
+.git/
+**/.DS_Store
+**/__pycache__/

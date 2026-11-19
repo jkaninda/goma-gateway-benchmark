@@ -1,0 +1,24 @@
+Fortio 1.77.0 running at 0 queries per second, 6 procs, for 20s: http://127.0.0.1:8080/r-1/
+Aggregated Function Time : count 383967 avg 0.00041628389 +/- 0.0004162 min 4.0377e-05 max 0.008579677 sum 159.839276
+# target 50% 0.000535226
+# target 75% 0.000782652
+# target 90% 0.000931107
+# target 99% 0.00219894
+# target 99.9% 0.00490152
+Error cases : count 0 avg 0 +/- 0 min 0 max 0 sum 0
+# Socket and IP used for each connection:
+[0]   1 socket used, resolved to 127.0.0.1:8080, connection timing : count 1 avg 3.6798e-05 +/- 0 min 3.6798e-05 max 3.6798e-05 sum 3.6798e-05
+[1]   1 socket used, resolved to 127.0.0.1:8080, connection timing : count 1 avg 7.1996e-05 +/- 0 min 7.1996e-05 max 7.1996e-05 sum 7.1996e-05
+[2]   1 socket used, resolved to 127.0.0.1:8080, connection timing : count 1 avg 2.3734e-05 +/- 0 min 2.3734e-05 max 2.3734e-05 sum 2.3734e-05
+[3]   1 socket used, resolved to 127.0.0.1:8080, connection timing : count 1 avg 0.000122511 +/- 0 min 0.000122511 max 0.000122511 sum 0.000122511
+[4]   1 socket used, resolved to 127.0.0.1:8080, connection timing : count 1 avg 0.000110107 +/- 0 min 0.000110107 max 0.000110107 sum 0.000110107
+[5]   1 socket used, resolved to 127.0.0.1:8080, connection timing : count 1 avg 9.7784e-05 +/- 0 min 9.7784e-05 max 9.7784e-05 sum 9.7784e-05
+[6]   1 socket used, resolved to 127.0.0.1:8080, connection timing : count 1 avg 8.1554e-05 +/- 0 min 8.1554e-05 max 8.1554e-05 sum 8.1554e-05
+[7]   1 socket used, resolved to 127.0.0.1:8080, connection timing : count 1 avg 0.000146917 +/- 0 min 0.000146917 max 0.000146917 sum 0.000146917
+Sockets used: 8 (for perfect keepalive, would be 8)
+Uniform: false, Jitter: false, Catchup allowed: false
+IP addresses distribution:
+127.0.0.1:8080: 8
+Code 200 : 383967 (100.0 %)
+All done 383967 calls (plus 8 warmup) 0.416 ms avg, 19198.1 qps
+Successfully wrote 4516 bytes of Json data to /bench/results/run-1/traffic-traefik-c8.json

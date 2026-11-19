@@ -1,0 +1,4 @@
+routes,startup_ms,idle_cpu_cores,idle_rss_mb,peak_rss_mb,threads,procs,shutdown_ms,needed_sigkill
+1,41,0.0000,46.65,46.71,3,2,4,0
+100,42,0.0064,48.33,48.33,3,2,3,0
+1000,82,0.0236,62.92,62.96,3,2,4,0

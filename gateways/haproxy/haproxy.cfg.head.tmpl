@@ -1,0 +1,30 @@
+# HAProxy — benchmark base configuration (header).
+#
+# HAProxy has no include-a-directory mechanism, so the harness regenerates the
+# whole file from this header plus one fragment per route and reloads the
+# master with SIGUSR2. That is how the real HAProxy-based controllers work too.
+global
+    log stdout format raw local0 err
+    # 8000 front + 8000 back fits inside a 20k fd limit; the benchmark never
+    # goes past 256 concurrent connections, so this is not a throughput bound.
+    maxconn 8000
+    nbthread __WORKERS__
+    stats socket __RUNDIR__/haproxy.sock mode 660 level admin expose-fd listeners
+
+defaults
+    mode http
+    option http-keep-alive
+    option dontlognull
+    timeout connect 2s
+    timeout client  30s
+    timeout server  30s
+    timeout http-request 10s
+
+frontend fe_bench
+    bind :__PORT__
+    monitor-uri /_bench/health
+    # Without this, a path that matches no use_backend rule gets HAProxy's
+    # default 503. Every other gateway in the harness answers 404 for a route
+    # that does not exist, and the propagation scenario counts non-404 answers
+    # as defects, so make "no such route" mean 404 here as well.
+    default_backend be_notfound

@@ -1,0 +1,24 @@
+Fortio 1.77.0 running at 0 queries per second, 6 procs, for 20s: http://127.0.0.1:8080/r-1/
+Aggregated Function Time : count 846144 avg 0.00018865103 +/- 5.491e-05 min 2.3425e-05 max 0.003671581 sum 159.625938
+# target 50% 0.000511811
+# target 75% 0.000756005
+# target 90% 0.000902521
+# target 99% 0.000990431
+# target 99.9% 0.000999222
+Error cases : count 0 avg 0 +/- 0 min 0 max 0 sum 0
+# Socket and IP used for each connection:
+[0]   1 socket used, resolved to 127.0.0.1:8080, connection timing : count 1 avg 5.3059e-05 +/- 0 min 5.3059e-05 max 5.3059e-05 sum 5.3059e-05
+[1]   1 socket used, resolved to 127.0.0.1:8080, connection timing : count 1 avg 6.888e-05 +/- 0 min 6.888e-05 max 6.888e-05 sum 6.888e-05
+[2]   1 socket used, resolved to 127.0.0.1:8080, connection timing : count 1 avg 5.4663e-05 +/- 0 min 5.4663e-05 max 5.4663e-05 sum 5.4663e-05
+[3]   1 socket used, resolved to 127.0.0.1:8080, connection timing : count 1 avg 9.1202e-05 +/- 0 min 9.1202e-05 max 9.1202e-05 sum 9.1202e-05
+[4]   1 socket used, resolved to 127.0.0.1:8080, connection timing : count 1 avg 2.2051e-05 +/- 0 min 2.2051e-05 max 2.2051e-05 sum 2.2051e-05
+[5]   1 socket used, resolved to 127.0.0.1:8080, connection timing : count 1 avg 8.0411e-05 +/- 0 min 8.0411e-05 max 8.0411e-05 sum 8.0411e-05
+[6]   1 socket used, resolved to 127.0.0.1:8080, connection timing : count 1 avg 3.2091e-05 +/- 0 min 3.2091e-05 max 3.2091e-05 sum 3.2091e-05
+[7]   1 socket used, resolved to 127.0.0.1:8080, connection timing : count 1 avg 0.000120396 +/- 0 min 0.000120396 max 0.000120396 sum 0.000120396
+Sockets used: 8 (for perfect keepalive, would be 8)
+Uniform: false, Jitter: false, Catchup allowed: false
+IP addresses distribution:
+127.0.0.1:8080: 8
+Code 200 : 846144 (100.0 %)
+All done 846144 calls (plus 8 warmup) 0.189 ms avg, 42306.9 qps
+Successfully wrote 3928 bytes of Json data to /bench/results/run-1/traffic-haproxy-c8.json

@@ -1,0 +1,24 @@
+Fortio 1.77.0 running at 0 queries per second, 6 procs, for 20s: http://127.0.0.1:8080/r-1/
+Aggregated Function Time : count 401445 avg 0.00039812972 +/- 0.0003797 min 3.4885e-05 max 0.008788487 sum 159.827185
+# target 50% 0.000533411
+# target 75% 0.000782676
+# target 90% 0.000932234
+# target 99% 0.0019274
+# target 99.9% 0.00482407
+Error cases : count 0 avg 0 +/- 0 min 0 max 0 sum 0
+# Socket and IP used for each connection:
+[0]   1 socket used, resolved to 127.0.0.1:8080, connection timing : count 1 avg 0.000117883 +/- 0 min 0.000117883 max 0.000117883 sum 0.000117883
+[1]   1 socket used, resolved to 127.0.0.1:8080, connection timing : count 1 avg 7.5472e-05 +/- 0 min 7.5472e-05 max 7.5472e-05 sum 7.5472e-05
+[2]   1 socket used, resolved to 127.0.0.1:8080, connection timing : count 1 avg 6.4422e-05 +/- 0 min 6.4422e-05 max 6.4422e-05 sum 6.4422e-05
+[3]   1 socket used, resolved to 127.0.0.1:8080, connection timing : count 1 avg 0.000230846 +/- 0 min 0.000230846 max 0.000230846 sum 0.000230846
+[4]   1 socket used, resolved to 127.0.0.1:8080, connection timing : count 1 avg 6.0805e-05 +/- 0 min 6.0805e-05 max 6.0805e-05 sum 6.0805e-05
+[5]   1 socket used, resolved to 127.0.0.1:8080, connection timing : count 1 avg 5.7298e-05 +/- 0 min 5.7298e-05 max 5.7298e-05 sum 5.7298e-05
+[6]   1 socket used, resolved to 127.0.0.1:8080, connection timing : count 1 avg 7.8449e-05 +/- 0 min 7.8449e-05 max 7.8449e-05 sum 7.8449e-05
+[7]   1 socket used, resolved to 127.0.0.1:8080, connection timing : count 1 avg 0.000127059 +/- 0 min 0.000127059 max 0.000127059 sum 0.000127059
+Sockets used: 8 (for perfect keepalive, would be 8)
+Uniform: false, Jitter: false, Catchup allowed: false
+IP addresses distribution:
+127.0.0.1:8080: 8
+Code 200 : 401445 (100.0 %)
+All done 401445 calls (plus 8 warmup) 0.398 ms avg, 20072.0 qps
+Successfully wrote 4517 bytes of Json data to /bench/results/run-2/traffic-goma-fast-c8.json

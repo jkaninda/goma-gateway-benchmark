@@ -1,0 +1,24 @@
+Fortio 1.77.0 running at 0 queries per second, 6 procs, for 20s: http://127.0.0.1:8080/r-1/
+Aggregated Function Time : count 873745 avg 0.00018264638 +/- 5.448e-05 min 2.9094e-05 max 0.003633599 sum 159.586364
+# target 50% 0.00051461
+# target 75% 0.000757369
+# target 90% 0.000903024
+# target 99% 0.000990417
+# target 99.9% 0.000999157
+Error cases : count 0 avg 0 +/- 0 min 0 max 0 sum 0
+# Socket and IP used for each connection:
+[0] 110 socket used, resolved to 127.0.0.1:8080, connection timing : count 110 avg 0.00010261769 +/- 4.797e-05 min 4.2991e-05 max 0.000353236 sum 0.011287946
+[1] 109 socket used, resolved to 127.0.0.1:8080, connection timing : count 109 avg 9.4881651e-05 +/- 4.18e-05 min 4.1358e-05 max 0.000244429 sum 0.0103421
+[2] 110 socket used, resolved to 127.0.0.1:8080, connection timing : count 110 avg 0.00010291679 +/- 3.977e-05 min 3.8262e-05 max 0.000223551 sum 0.011320847
+[3] 110 socket used, resolved to 127.0.0.1:8080, connection timing : count 110 avg 0.00010285905 +/- 4.373e-05 min 3.9525e-05 max 0.000278363 sum 0.011314495
+[4] 110 socket used, resolved to 127.0.0.1:8080, connection timing : count 110 avg 0.00011513918 +/- 4.354e-05 min 4.3021e-05 max 0.000340981 sum 0.01266531
+[5] 110 socket used, resolved to 127.0.0.1:8080, connection timing : count 110 avg 0.00010075075 +/- 3.748e-05 min 3.8523e-05 max 0.000202119 sum 0.011082582
+[6] 110 socket used, resolved to 127.0.0.1:8080, connection timing : count 110 avg 0.00010382296 +/- 4.827e-05 min 3.9826e-05 max 0.000400924 sum 0.011420526
+[7] 110 socket used, resolved to 127.0.0.1:8080, connection timing : count 110 avg 0.00010549933 +/- 4.778e-05 min 3.6019e-05 max 0.000262734 sum 0.011604926
+Sockets used: 879 (for perfect keepalive, would be 8)
+Uniform: false, Jitter: false, Catchup allowed: false
+IP addresses distribution:
+127.0.0.1:8080: 879
+Code 200 : 873745 (100.0 %)
+All done 873745 calls (plus 8 warmup) 0.183 ms avg, 43686.8 qps
+Successfully wrote 4009 bytes of Json data to /bench/results/run-1/traffic-nginx-c8.json

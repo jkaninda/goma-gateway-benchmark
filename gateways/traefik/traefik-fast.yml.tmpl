@@ -1,0 +1,30 @@
+# Traefik v3 — benchmark configuration, zero-throttle variant.
+#
+# Identical to traefik.yml except for `providersThrottleDuration: 0s`. Traefik
+# waits this long (default 2 s) after a provider reports a change before it
+# applies the next one, and drops intermediate configurations in between. This
+# is the knob that corresponds to Goma's `providers.file.debounce`, so this
+# variant is the like-for-like partner of `goma-fast`.
+entryPoints:
+  web:
+    address: ":__PORT__"
+
+providers:
+  providersThrottleDuration: 0s
+  file:
+    directory: __DYNAMIC__
+    watch: true
+
+api:
+  dashboard: false
+  insecure: false
+
+ping:
+  entryPoint: web
+
+log:
+  level: ERROR
+
+global:
+  checkNewVersion: false
+  sendAnonymousUsage: false

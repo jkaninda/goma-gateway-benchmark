@@ -1,0 +1,17 @@
+Fortio 1.77.0 running at 0 queries per second, 6 procs, for 20s: http://127.0.0.1:8080/r-1/
+Aggregated Function Time : count 79729 avg 0.00025036294 +/- 4.465e-05 min 0.000174939 max 0.003762322 sum 19.9611865
+# target 50% 0.000587552
+# target 75% 0.000793864
+# target 90% 0.000917651
+# target 99% 0.000991923
+# target 99.9% 0.000999351
+Error cases : count 0 avg 0 +/- 0 min 0 max 0 sum 0
+# Socket and IP used for each connection:
+[0]   1 socket used, resolved to 127.0.0.1:8080, connection timing : count 1 avg 0.000313602 +/- 0 min 0.000313602 max 0.000313602 sum 0.000313602
+Sockets used: 1 (for perfect keepalive, would be 1)
+Uniform: false, Jitter: false, Catchup allowed: false
+IP addresses distribution:
+127.0.0.1:8080: 1
+Code 200 : 79729 (100.0 %)
+All done 79729 calls (plus 1 warmup) 0.250 ms avg, 3986.4 qps
+Successfully wrote 3770 bytes of Json data to /bench/results/run-1/traffic-goma-c1.json

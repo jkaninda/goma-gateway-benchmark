@@ -1,0 +1,17 @@
+Fortio 1.77.0 running at 0 queries per second, 6 procs, for 20s: http://127.0.0.1:8080/r-1/
+Aggregated Function Time : count 79118 avg 0.0002523291 +/- 5.662e-05 min 0.000175601 max 0.003785465 sum 19.9637734
+# target 50% 0.000588019
+# target 75% 0.000794234
+# target 90% 0.000917963
+# target 99% 0.0009922
+# target 99.9% 0.000999623
+Error cases : count 0 avg 0 +/- 0 min 0 max 0 sum 0
+# Socket and IP used for each connection:
+[0]   1 socket used, resolved to 127.0.0.1:8080, connection timing : count 1 avg 0.000139933 +/- 0 min 0.000139933 max 0.000139933 sum 0.000139933
+Sockets used: 1 (for perfect keepalive, would be 1)
+Uniform: false, Jitter: false, Catchup allowed: false
+IP addresses distribution:
+127.0.0.1:8080: 1
+Code 200 : 79118 (100.0 %)
+All done 79118 calls (plus 1 warmup) 0.252 ms avg, 3955.9 qps
+Successfully wrote 3768 bytes of Json data to /bench/results/run-1/traffic-traefik-fast-c1.json
